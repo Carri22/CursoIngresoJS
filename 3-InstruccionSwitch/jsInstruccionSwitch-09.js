@@ -21,6 +21,7 @@ function mostrar() {
 					mensaje = estadia * 0.9;
 					break;
 			}
+		break;
 
 		case "Verano":
 			switch (destinoIngresado) {
@@ -33,6 +34,8 @@ function mostrar() {
 					mensaje = estadia * 1.1;
 					break;
 			}
+		break;
+
 		default:
 			switch (destinoIngresado) {
 				case "Cordoba":
@@ -42,11 +45,8 @@ function mostrar() {
 					mensaje = estadia * 1.1;
 					break;
 			}
+		break;
 	}
 	alert(mensaje.toFixed(2));
-
-
-
-
 
 }//FIN DE LA FUNCIÓN
