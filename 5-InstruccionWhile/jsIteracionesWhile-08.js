@@ -18,10 +18,12 @@ function mostrar()
 		if(valor>=0)
 		sumaPositivos+=valor
 		else
-		multiplicacionNegativos=multiplicacionNegativos*valor;
-		respuesta=prompt("¿Quiere continuar ingresando numeros? / escribir si o no")
+		{
+			multiplicacionNegativos=multiplicacionNegativos*valor;
+			respuesta=confirm("¿Quiere continuar ingresando numeros? / aceptar o cancelar")
+		}
 
-	} while (respuesta=="si");
+	} while (respuesta==true);
 	if(multiplicacionNegativos==1){
 		multiplicacionNegativos=0;
 		document.getElementById('txtIdProducto').value=multiplicacionNegativos;
@@ -30,6 +32,5 @@ function mostrar()
 		document.getElementById('txtIdProducto').value=multiplicacionNegativos;
 	}
 	document.getElementById('txtIdSuma').value=sumaPositivos;
-
 
 }//FIN DE LA FUNCIÓN
