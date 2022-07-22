@@ -3,17 +3,33 @@ Al presionar el botón pedir  números  hasta que el usuario quiera,
 sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
 {
-	var contador;
-	var respuesta;
-	var sumaPositivos;
-	var multiplicacionNegativos;
-	contador=0;
+	let valor;
+	let respuesta;
+	let sumaPositivos;
+	let multiplicacionNegativos;
 	sumaPositivos=0;
 	multiplicacionNegativos=1;
-	respuesta='si';
+	
+	
+	do {
+		valor=prompt("Ingrese un numero");
+		valor=parseInt(valor);
 
+		if(valor>=0)
+		sumaPositivos+=valor
+		else
+		multiplicacionNegativos=multiplicacionNegativos*valor;
+		respuesta=prompt("¿Quiere continuar ingresando numeros? / escribir si o no")
 
-	txtIdSuma.value=sumaPositivos;
-	txtIdProducto.value=multiplicacionNegativos;
+	} while (respuesta=="si");
+	if(multiplicacionNegativos==1){
+		multiplicacionNegativos=0;
+		document.getElementById('txtIdProducto').value=multiplicacionNegativos;
+	}
+	else{
+		document.getElementById('txtIdProducto').value=multiplicacionNegativos;
+	}
+	document.getElementById('txtIdSuma').value=sumaPositivos;
+
 
 }//FIN DE LA FUNCIÓN
