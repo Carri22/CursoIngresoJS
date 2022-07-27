@@ -37,7 +37,8 @@ function mostrar()
 		{
 			pais=prompt("Error, no ingreso un pais valido, vuelva a intentarlo").toLowerCase;
 		}
-		if(flagImporte==false){
+		if(flagImporte==false)
+		{
 			if(MaximoMarca<=importe)
 			{
 				MaximoMarca=importe;
