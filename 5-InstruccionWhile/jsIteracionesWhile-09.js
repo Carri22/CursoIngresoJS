@@ -14,6 +14,7 @@ function mostrar()
 	while(respuesta==true)
 	{
 		numeroIngresado=prompt("Ingrese un numero");
+		numeroIngresado=parseInt(numeroIngresado);
 		if(!banderaDelPrimero)
 		{
 			if(numeroIngresado>numeroMaximo)
